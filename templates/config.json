@@ -1,0 +1,20 @@
+{
+    "params":
+    {
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/annidevblog",
+        "prod_uri"  : "mysql://root:@localhost/annidevblog",
+        "fb_url" : "https://www.facebook.com/annidevblog",
+        "tw_url" : "https://twitter.com/annidevblog",
+        "gh_url" : "https://github.com/annidevblog",
+        "blog_name" : "Anni Dev Blog",
+        "sub_head": "A Blog web By Rao Anirudhra",
+        "gmail-user" : "annirao84@gmail.com",
+        "gmail-password" : "anniblog",
+        "about_text" : "Hi, i am Rao Anirudhra and i am  python developer this blog web is made by me using flask framework. ",
+        "no_of_post" : 3,
+        "admin": "anni",
+        "admin_pass" : "anni84",
+        "upload_location":"C:\\flask practice\\static"
+    }
+}

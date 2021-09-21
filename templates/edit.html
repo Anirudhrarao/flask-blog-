@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block body %}
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/admin.jpg')}}">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">ADD YOUR CONTENT IN YOUR BLOG</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+    <h1>Add or Edit Posts or logout</h1>
+      <a href="/dash"><button class="btn btn-primary my-3">Dashboard Home</button></a>
+      <a href="/logout"><button class="btn btn-danger">Logout</button></a>
+      <hr
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            
+            <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+            <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+            <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+            <form name="sentMessage" id="contactForm" action = "/edit/{{sno}}" method="POST" novalidate>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label>Tittle</label>
+                  <input type="text" class="form-control" placeholder="" id="tittle" name='tittle' value="{{post.tittle}}">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label>Tagline</label>
+                  <input type="text" class="form-control" placeholder="" id="tagline" name="tagline" value="{{post.tagline}}">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Slug</label>
+                  <input type="text" class="form-control" placeholder="" name="slug" id="slug" value="{{post.slug}}">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label>Content</label>
+                  <textarea rows="5" class="form-control" placeholder="" name = "content" id="content">{{post.content}}</textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Image File</label>
+                  <input type="text" class="form-control" placeholder="" name="img_file" id="img_file" value="{{post.img_file}}">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+</div>
+{% endblock body %}
